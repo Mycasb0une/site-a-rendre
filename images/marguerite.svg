@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title">
+  <title id="title">Illustration botanique d'une marguerite</title>
+  <circle cx="160" cy="160" r="146" fill="#f7f3eb"/>
+  <path d="M160 295c0-56-1-94 1-132" fill="none" stroke="#526f57" stroke-linecap="round" stroke-width="7"/>
+  <path d="M160 238c-32-29-51-23-63-11 20 21 39 27 63 22m1-24c30-29 51-25 63-15-20 21-40 29-63 25" fill="#a6c2ad" stroke="#526f57" stroke-linejoin="round" stroke-width="4"/>
+  <g fill="#fffdf7" stroke="#b8aa91" stroke-width="3">
+    <ellipse cx="160" cy="92" rx="14" ry="38"/>
+    <ellipse cx="160" cy="92" rx="14" ry="38" transform="rotate(30 160 130)"/>
+    <ellipse cx="160" cy="92" rx="14" ry="38" transform="rotate(60 160 130)"/>
+    <ellipse cx="160" cy="92" rx="14" ry="38" transform="rotate(90 160 130)"/>
+    <ellipse cx="160" cy="92" rx="14" ry="38" transform="rotate(120 160 130)"/>
+    <ellipse cx="160" cy="92" rx="14" ry="38" transform="rotate(150 160 130)"/>
+    <ellipse cx="160" cy="92" rx="14" ry="38" transform="rotate(180 160 130)"/>
+    <ellipse cx="160" cy="92" rx="14" ry="38" transform="rotate(210 160 130)"/>
+    <ellipse cx="160" cy="92" rx="14" ry="38" transform="rotate(240 160 130)"/>
+    <ellipse cx="160" cy="92" rx="14" ry="38" transform="rotate(270 160 130)"/>
+    <ellipse cx="160" cy="92" rx="14" ry="38" transform="rotate(300 160 130)"/>
+    <ellipse cx="160" cy="92" rx="14" ry="38" transform="rotate(330 160 130)"/>
+  </g>
+  <circle cx="160" cy="130" r="23" fill="#e7b94f" stroke="#a77c31" stroke-width="4"/>
+  <circle cx="153" cy="124" r="2.5" fill="#8f6428"/>
+  <circle cx="166" cy="122" r="2.5" fill="#8f6428"/>
+  <circle cx="160" cy="134" r="2.5" fill="#8f6428"/>
+  <circle cx="150" cy="136" r="2.5" fill="#8f6428"/>
+  <circle cx="170" cy="135" r="2.5" fill="#8f6428"/>
+</svg>
