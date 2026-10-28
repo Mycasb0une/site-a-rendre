@@ -467,12 +467,26 @@ cite {
 }
 
 /* Boutique */
-/* Explique comment rechercher un produit sans script. */
-.product-search-hint {
-	font-size: var(--font-size-small);
-	margin: 0 auto 24px;
+/* Centre le champ de recherche au-dessus de la grille de produits. */
+.product-search {
+	margin: 0 auto 30px;
 	max-width: 460px;
-	text-align: center;
+	width: 100%;
+}
+
+.product-search input {
+	background: var(--white);
+	border: 1px solid var(--line);
+	border-radius: var(--radius-input);
+	color: var(--ink);
+	font: inherit;
+	padding: 13px 15px;
+	width: 100%;
+}
+
+.product-search input:focus-visible {
+	outline: 3px solid var(--sage);
+	outline-offset: 2px;
 }
 
 /* Affiche les fiches produits en grille et adapte l’image à chaque carte. */
