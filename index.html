@@ -25,56 +25,81 @@
       aria-label="Nouveautés"
       aria-roledescription="carrousel"
     >
-      <div class="slide slide-one is-active" aria-hidden="false">
+      <input
+        class="carousel-state"
+        id="slide-one"
+        type="radio"
+        name="carousel-slide"
+        aria-label="Diapositive 1 sur 3"
+        checked
+      >
+      <input
+        class="carousel-state"
+        id="slide-two"
+        type="radio"
+        name="carousel-slide"
+        aria-label="Diapositive 2 sur 3"
+      >
+      <input
+        class="carousel-state"
+        id="slide-three"
+        type="radio"
+        name="carousel-slide"
+        aria-label="Diapositive 3 sur 3"
+      >
+      <div class="slide slide-one">
         <p class="eyebrow">Illustrations faites main</p>
         <h1>Des fleurs qui racontent une histoire.</h1>
         <a class="button" href="boutique.html">Découvrir la boutique</a>
       </div>
-      <div class="slide slide-two" aria-hidden="true">
+      <div class="slide slide-two">
         <p class="eyebrow">Collection florale</p>
         <h2>Des pétales et des couleurs à offrir.</h2>
         <a class="button" href="boutique.html">Voir la collection</a>
       </div>
-      <div class="slide slide-three" aria-hidden="true">
+      <div class="slide slide-three">
         <p class="eyebrow">Atelier de dessin</p>
         <h2>Chaque fleur est dessinée avec soin.</h2>
         <a class="button" href="a-propos.html">Découvrir notre histoire</a>
       </div>
-      <button
-        class="carousel-control carousel-previous"
-        type="button"
-        aria-label="Diapositive précédente"
-      >
+      <label class="carousel-control carousel-previous" for="slide-three">
+        <span class="visually-hidden">Diapositive précédente</span>
         &#8592;
-      </button>
-      <button
-        class="carousel-control carousel-next"
-        type="button"
-        aria-label="Diapositive suivante"
-      >
+      </label>
+      <label class="carousel-control carousel-next" for="slide-two">
+        <span class="visually-hidden">Diapositive suivante</span>
         &#8594;
-      </button>
+      </label>
+      <label class="carousel-control carousel-previous" for="slide-one">
+        <span class="visually-hidden">Diapositive précédente</span>
+        &#8592;
+      </label>
+      <label class="carousel-control carousel-next" for="slide-three">
+        <span class="visually-hidden">Diapositive suivante</span>
+        &#8594;
+      </label>
+      <label class="carousel-control carousel-previous" for="slide-two">
+        <span class="visually-hidden">Diapositive précédente</span>
+        &#8592;
+      </label>
+      <label class="carousel-control carousel-next" for="slide-one">
+        <span class="visually-hidden">Diapositive suivante</span>
+        &#8594;
+      </label>
       <div
         class="carousel-indicators"
         role="group"
         aria-label="Choisir une diapositive"
       >
-        <button
-          class="is-active"
-          type="button"
-          aria-label="Afficher la diapositive 1"
-          aria-pressed="true"
-        ></button>
-        <button
-          type="button"
-          aria-label="Afficher la diapositive 2"
-          aria-pressed="false"
-        ></button>
-        <button
-          type="button"
-          aria-label="Afficher la diapositive 3"
-          aria-pressed="false"
-        ></button>
+        <label for="slide-one">
+          <span class="visually-hidden">Afficher la diapositive 1</span>
+        </label>
+        <label for="slide-two">
+          <span class="visually-hidden">Afficher la diapositive 2</span>
+        </label>
+        <label for="slide-three">
+          <span class="visually-hidden">Afficher la diapositive 3</span>
+        </label>
       </div>
     </section>
 
@@ -116,6 +141,5 @@
       © 2026 Fleur d'encre - Alyx Meur - Première année de Bachelor
     </a>
   </footer>
-  <script src="css/carousel.js" defer></script>
 </body>
 </html>

@@ -240,8 +240,27 @@ h2 {
 	padding: 8%;
 }
 
-.slide.is-active {
+.carousel-state {
+	clip: rect(0, 0, 0, 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+#slide-one:checked ~ .slide-one,
+#slide-two:checked ~ .slide-two,
+#slide-three:checked ~ .slide-three {
 	display: flex;
+}
+
+#slide-one:focus-visible ~ .slide-one,
+#slide-two:focus-visible ~ .slide-two,
+#slide-three:focus-visible ~ .slide-three {
+	outline: 3px solid var(--coral);
+	outline-offset: -3px;
 }
 
 /* Fournit une image de fond et un voile contrasté à chaque diapositive. */
@@ -271,7 +290,7 @@ h2 {
 	border-radius: var(--radius-circle);
 	color: var(--ink);
 	cursor: pointer;
-	display: flex;
+	display: none;
 	font: inherit;
 	font-size: var(--font-size-carousel-control);
 	height: 44px;
@@ -281,10 +300,6 @@ h2 {
 	transform: translateY(-50%);
 	width: 44px;
 	z-index: 2;
-}
-
-.carousel-control:focus-visible {
-	background: var(--white);
 }
 
 .carousel-control:hover {
@@ -300,6 +315,19 @@ h2 {
 	right: 18px;
 }
 
+#slide-one:checked ~ .carousel-previous[for="slide-three"],
+#slide-one:checked ~ .carousel-next[for="slide-two"],
+#slide-two:checked ~ .carousel-previous[for="slide-one"],
+#slide-two:checked ~ .carousel-next[for="slide-three"],
+#slide-three:checked ~ .carousel-previous[for="slide-two"],
+#slide-three:checked ~ .carousel-next[for="slide-one"] {
+	display: flex;
+}
+
+.carousel-control {
+	text-decoration: none;
+}
+
 /* Place les indicateurs en bas du carrousel et marque celui qui est actif. */
 .carousel-indicators {
 	bottom: 20px;
@@ -312,30 +340,40 @@ h2 {
 	z-index: 2;
 }
 
-.carousel-indicators button {
+.carousel-indicators label {
 	background: var(--white-overlay);
 	border: 0;
 	border-radius: var(--radius-pill);
 	cursor: pointer;
+	display: block;
 	height: 10px;
-	padding: 0;
 	width: 10px;
 }
 
-.carousel-indicators button.is-active {
+#slide-one:checked ~ .carousel-indicators label[for="slide-one"],
+#slide-two:checked ~ .carousel-indicators label[for="slide-two"],
+#slide-three:checked ~ .carousel-indicators label[for="slide-three"] {
 	background: var(--white);
 	width: 28px;
 }
 
-.carousel-indicators button:hover,
-.carousel-indicators button.is-active:hover {
+.carousel-indicators label:hover {
 	background: var(--nav-login-hover);
 }
 
-.carousel-control:focus-visible,
-.carousel-indicators button:focus-visible {
+.carousel-state:focus-visible ~ .carousel-indicators {
 	outline: 3px solid var(--coral);
 	outline-offset: 3px;
+}
+
+.visually-hidden {
+	clip: rect(0, 0, 0, 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }
 
 .slide .button {
@@ -429,32 +467,12 @@ cite {
 }
 
 /* Boutique */
-/* Aligne le champ de recherche sur la largeur de la boutique. */
-.product-search {
-	display: grid;
-	margin: 0 auto 8px;
-	max-width: 460px;
-	width: 100%;
-}
-
-.product-search input {
-	background: var(--white);
-	border: 1px solid var(--line);
-	border-radius: var(--radius-input);
-	color: var(--ink);
-	font: inherit;
-	padding: 13px 15px;
-	width: 100%;
-}
-
-.product-search input:focus-visible {
-	outline: 3px solid var(--sage);
-	outline-offset: 2px;
-}
-
-.product-search-status {
+/* Explique comment rechercher un produit sans script. */
+.product-search-hint {
 	font-size: var(--font-size-small);
-	min-height: 1.4em;
+	margin: 0 auto 24px;
+	max-width: 460px;
+	text-align: center;
 }
 
 /* Affiche les fiches produits en grille et adapte l’image à chaque carte. */
