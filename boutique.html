@@ -26,12 +26,19 @@
         <p>Des illustrations florales délicates, dessinées avec patience et poésie.</p>
       </section>
 
-      <p class="product-search-hint">
-        Pour trouver une fleur, utilisez la recherche de votre navigateur
-        (Ctrl+F ou Cmd+F).
-      </p>
+      <div class="product-search" role="search">
+        <label class="visually-hidden" for="product-search">
+          Rechercher une fleur
+        </label>
+        <input
+          id="product-search"
+          type="search"
+          placeholder="Rechercher une fleur..."
+          autocomplete="off"
+        >
+      </div>
 
-      <section class="product-grid" id="product-grid" aria-label="Produits">
+      <section class="product-grid" aria-label="Produits">
         <article class="product-card">
           <img
             class="product-lys"
@@ -111,7 +118,7 @@
 
     <footer class="site-footer">
       <a href="mailto:contact@fleur-dencre.fr">
-        © 2026 Fleur d'encre - Alyx Meur - Première année de Bachelor
+        © 2026 Fleur d'encre - Meur Alyx - Première année de Bachelor
       </a>
     </footer>
   </body>
