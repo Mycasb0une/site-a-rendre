@@ -8,6 +8,35 @@
 	--coral: #dd684e;
 	--sage: #a6c2ad;
 	--line: #d8d1c5;
+	--white: #fff;
+	--ink-overlay-strong: rgba(32, 49, 46, .72);
+	--ink-overlay-medium: rgba(32, 49, 46, .68);
+	--ink-overlay-light: rgba(32, 49, 46, .12);
+	--ink-overlay-faint: rgba(32, 49, 46, .08);
+	--paper-overlay: rgba(247, 243, 235, .9);
+	--white-overlay: rgba(255, 255, 255, .6);
+	--font-body: 'DM Sans', sans-serif;
+	--font-heading: 'Playfair Display', serif;
+	--font-weight-bold: 700;
+	--font-size-logo: 1.45rem;
+	--font-size-small: .9rem;
+	--font-size-eyebrow: .76rem;
+	--font-size-page-title: clamp(2.6rem, 6vw, 5.5rem);
+	--font-size-page-title-desktop: 4rem;
+	--font-size-page-title-mobile: 3rem;
+	--font-size-section-title: 2rem;
+	--font-size-footer: .85rem;
+	--font-size-carousel-control: 1.3rem;
+	--font-size-review: 1.25rem;
+	--font-size-caption: .8rem;
+	--font-size-partner: .78rem;
+	--font-size-product-title: 1.2rem;
+	--font-size-faq-question: 1.3rem;
+	--radius-input: 2px;
+	--radius-circle: 50%;
+	--radius-pill: 999px;
+	--radius-map: 24px;
+	--shadow-map: 0 10px 25px rgba(32, 49, 46, .08);
 }
 
 * {
@@ -19,7 +48,7 @@ body {
 	margin: 0;
 	background: var(--paper);
 	color: var(--ink);
-	font-family: 'DM Sans', sans-serif;
+	font-family: var(--font-body);
 }
 
 a {
@@ -37,8 +66,8 @@ a {
 }
 
 .logo {
-	font-family: 'Playfair Display', serif;
-	font-size: 1.45rem;
+	font-family: var(--font-heading);
+	font-size: var(--font-size-logo);
 	text-decoration: none;
 }
 
@@ -47,7 +76,7 @@ nav {
 	align-items: center;
 	display: flex;
 	gap: 22px;
-	font-size: .9rem;
+	font-size: var(--font-size-small);
 }
 
 nav a {
@@ -62,7 +91,7 @@ nav a:hover {
 .button {
 	background: var(--coral);
 	border: 0;
-	color: white;
+	color: var(--white);
 	padding: 12px 18px;
 	text-decoration: none;
 }
@@ -76,23 +105,23 @@ main {
 
 h1,
 h2 {
-	font-family: 'Playfair Display', serif;
+	font-family: var(--font-heading);
 }
 
 /* Harmonise la hiérarchie des titres et des petits intitulés de section. */
 h1 {
-	font-size: clamp(2.6rem, 6vw, 5.5rem);
+	font-size: var(--font-size-page-title);
 	line-height: .98;
 	margin: 10px 0 28px;
 	max-width: 650px;
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: var(--font-size-section-title);
 }
 
 .eyebrow {
-	font-size: .76rem;
+	font-size: var(--font-size-eyebrow);
 	letter-spacing: .14em;
 	text-transform: uppercase;
 }
@@ -102,7 +131,7 @@ h2 {
 }
 
 .page-intro h1 {
-	font-size: 4rem;
+	font-size: var(--font-size-page-title-desktop);
 	margin: 8px 0;
 }
 
@@ -113,7 +142,7 @@ h2 {
 
 .contact-info a:not(.button) {
 	color: var(--coral);
-	font-weight: 700;
+	font-weight: var(--font-weight-bold);
 }
 
 /* Dispose les formulaires en colonne et harmonise champs et bouton. */
@@ -124,7 +153,7 @@ h2 {
 
 .form-card input,
 .form-card textarea {
-	background: white;
+	background: var(--white);
 	border: 1px solid var(--line);
 	font: inherit;
 	padding: 13px;
@@ -145,7 +174,7 @@ h2 {
 }
 
 .site-footer a {
-	font-size: .85rem;
+	font-size: var(--font-size-footer);
 	text-decoration: none;
 }
 
@@ -163,7 +192,7 @@ h2 {
 	}
 
 	.page-intro h1 {
-		font-size: 3rem;
+		font-size: var(--font-size-page-title-mobile);
 	}
 }
 
@@ -183,7 +212,7 @@ h2 {
 }
 
 .slide {
-	color: white;
+	color: var(--white);
 	display: none;
 	flex-direction: column;
 	justify-content: center;
@@ -198,33 +227,33 @@ h2 {
 /* Fournit une image de fond et un voile contrasté à chaque diapositive. */
 .slide-one {
 	background:
-		linear-gradient(100deg, rgba(32, 49, 46, .72), rgba(32, 49, 46, .08)),
+		linear-gradient(100deg, var(--ink-overlay-strong), var(--ink-overlay-faint)),
 		url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=85') center/cover;
 }
 
 .slide-two {
 	background:
-		linear-gradient(100deg, rgba(32, 49, 46, .68), rgba(32, 49, 46, .12)),
+		linear-gradient(100deg, var(--ink-overlay-medium), var(--ink-overlay-light)),
 		url('https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=1400&q=85') center/cover;
 }
 
 .slide-three {
 	background:
-		linear-gradient(100deg, rgba(32, 49, 46, .72), rgba(32, 49, 46, .12)),
+		linear-gradient(100deg, var(--ink-overlay-strong), var(--ink-overlay-light)),
 		url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1400&q=85') center/cover;
 }
 
 /* Positionne les commandes précédent/suivant sur le carrousel. */
 .carousel-control {
 	align-items: center;
-	background: rgba(247, 243, 235, .9);
+	background: var(--paper-overlay);
 	border: 0;
-	border-radius: 50%;
+	border-radius: var(--radius-circle);
 	color: var(--ink);
 	cursor: pointer;
 	display: flex;
 	font: inherit;
-	font-size: 1.3rem;
+	font-size: var(--font-size-carousel-control);
 	height: 44px;
 	justify-content: center;
 	position: absolute;
@@ -236,7 +265,7 @@ h2 {
 
 .carousel-control:hover,
 .carousel-control:focus-visible {
-	background: white;
+	background: var(--white);
 }
 
 .carousel-previous {
@@ -260,9 +289,9 @@ h2 {
 }
 
 .carousel-indicators button {
-	background: rgba(255, 255, 255, .6);
+	background: var(--white-overlay);
 	border: 0;
-	border-radius: 999px;
+	border-radius: var(--radius-pill);
 	cursor: pointer;
 	height: 10px;
 	padding: 0;
@@ -270,7 +299,7 @@ h2 {
 }
 
 .carousel-indicators button.is-active {
-	background: white;
+	background: var(--white);
 	width: 28px;
 }
 
@@ -308,16 +337,16 @@ h2 {
 
 blockquote {
 	border-top: 1px solid var(--line);
-	font-family: 'Playfair Display', serif;
-	font-size: 1.25rem;
+	font-family: var(--font-heading);
+	font-size: var(--font-size-review);
 	margin: 0;
 	padding: 22px 0;
 }
 
 cite {
 	display: block;
-	font-family: 'DM Sans', sans-serif;
-	font-size: .8rem;
+	font-family: var(--font-body);
+	font-size: var(--font-size-caption);
 	font-style: normal;
 	margin-top: 18px;
 }
@@ -334,8 +363,8 @@ cite {
 	display: flex;
 	justify-content: space-between;
 	gap: 18px;
-	font-weight: 700;
-	font-size: .78rem;
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-partner);
 }
 
 .partner-logo {
@@ -380,9 +409,9 @@ cite {
 }
 
 .product-search input {
-	background: white;
+	background: var(--white);
 	border: 1px solid var(--line);
-	border-radius: 2px;
+	border-radius: var(--radius-input);
 	color: var(--ink);
 	font: inherit;
 	padding: 13px 15px;
@@ -395,7 +424,7 @@ cite {
 }
 
 .product-search-status {
-	font-size: .9rem;
+	font-size: var(--font-size-small);
 	min-height: 1.4em;
 }
 
@@ -408,7 +437,7 @@ cite {
 
 /* Distingue chaque fiche produit et espace son titre, son image et son prix. */
 .product-card {
-	background: white;
+	background: var(--white);
 }
 
 .product-card img {
@@ -427,13 +456,13 @@ cite {
 }
 
 .product-card h2 {
-	font-size: 1.2rem;
+	font-size: var(--font-size-product-title);
 	margin: 0 0 10px;
 }
 
 .price {
 	color: var(--coral);
-	font-weight: 700;
+	font-weight: var(--font-weight-bold);
 }
 
 /* Réduit le nombre de colonnes de produits selon la largeur disponible. */
@@ -464,8 +493,8 @@ cite {
 /* Rend les questions identifiables et les réponses faciles à lire. */
 .faq-list summary {
 	cursor: pointer;
-	font-family: 'Playfair Display', serif;
-	font-size: 1.3rem;
+	font-family: var(--font-heading);
+	font-size: var(--font-size-faq-question);
 }
 
 .faq-list p {
@@ -490,10 +519,10 @@ cite {
 /* Intègre une carte du centre de Grenoble dans la page À propos. */
 .map {
 	min-height: 280px;
-	border-radius: 24px;
+	border-radius: var(--radius-map);
 	overflow: hidden;
-	border: 1px solid rgba(32, 49, 46, .08);
-	box-shadow: 0 10px 25px rgba(32, 49, 46, .08);
+	border: 1px solid var(--ink-overlay-faint);
+	box-shadow: var(--shadow-map);
 }
 
 .map iframe {
