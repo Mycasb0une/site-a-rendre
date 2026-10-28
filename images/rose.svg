@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title">
-  <title id="title">Illustration botanique d'une rose</title>
-  <circle cx="160" cy="160" r="146" fill="#f7f3eb"/>
-  <path d="M163 294c-7-49-9-91-3-135" fill="none" stroke="#526f57" stroke-linecap="round" stroke-width="7"/>
-  <path d="M159 231c-34-37-57-31-68-22 23 25 43 34 68 31m3-23c31-34 51-31 63-24-20 24-39 33-62 32" fill="#a6c2ad" stroke="#526f57" stroke-linejoin="round" stroke-width="4"/>
-  <path d="M161 159c-36-5-53-31-38-55 13-21 42-19 53-2 12-27 46-28 59-7 12 20-3 44-27 51 24 11 27 38 7 51-17 11-40 1-44-19-10 23-38 25-51 8-12-17-2-39 19-45" fill="#dd684e" stroke="#9e493e" stroke-linejoin="round" stroke-width="4"/>
-  <path d="M151 148c-2-15 11-29 25-27 13 2 17 18 7 27 17-6 28 8 21 20-6 11-20 10-25 1-2 14-18 20-28 11-9-8-6-23 5-28-14 3-23-8-18-19 4-9 16-11 24-4" fill="#f2a28a" stroke="#9e493e" stroke-linejoin="round" stroke-width="3"/>
-  <path d="M160 146c-3-8 3-16 10-14 6 2 6 9 2 12 9-2 13 5 9 10-4 5-10 3-11-2-3 7-11 8-14 2-3-5 0-10 5-11" fill="#f7f3eb" stroke="#9e493e" stroke-linejoin="round" stroke-width="2.5"/>
-</svg>

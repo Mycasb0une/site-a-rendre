@@ -422,12 +422,6 @@ cite {
 	object-fit: contain;
 }
 
-.product-card img.product-illustration {
-	background: var(--paper);
-	object-fit: contain;
-	padding: 8px;
-}
-
 .product-card div {
 	padding: 16px;
 }
