@@ -1,0 +1,64 @@
+Projet HTML & CSS — Boutique en
+ligne
+ESGI B1 — HTML & CSS
+Principe
+Vous devez réaliser le site vitrine d'une boutique en ligne, uniquement en HTML et en
+CSS. Aucune action serveur ni aucun JavaScript n'est demandé : les formulaires sont
+purement visuels. Le site doit être propre, lisible sur ordinateur comme sur mobile, et
+son code soigné.
+Partie commune (obligatoire)
+• Barre de navigation présente sur toutes les pages : un logo cliquable qui ramène
+à la page d'accueil et un lien vers chaque page.
+• Footer présent sur toutes les pages : un Copyright, votre NOM et Prénom et l'année
+en cours, l'ensemble étant cliquable pour envoyer un mail (mailto:).
+• Architecture : index.html à la racine, une seule feuille de style externe
+css/style.css, les images dans images/. Noms de fichiers en minuscules, sans
+espace ni accent.
+• HTML sémantique : header, nav, main, section, footer. Un attribut alt sur
+chaque image, un label pour chaque champ de formulaire.
+• Mise en page avec Flexbox et Grid, sans positionnement au pixel. Aucun style en
+ligne (attribut style).
+• Responsive : balise viewport et media queries ; aucun défilement horizontal sur
+mobile.
+• Validité : chaque page passe le validateur W3C sans erreur, avec une indentation
+constante.
+Les pages
+Niveau 1
+• Connexion : formulaire avec un nom d'utilisateur ou une adresse e-mail, un mot de
+passe et un bouton de validation.
+• Contact : formulaire avec le NOM et Prénom du client, son e-mail, son message et
+un bouton d'envoi.
+Niveau 2
+• Boutique : 8 produits présentés sous forme de cartes (une image, un titre, un
+bouton « Acheter »), dans une grille de 6 cartes maximum par ligne.
+• FAQ : questions / réponses sous forme d'accordéons rétractables (details et
+summary), tous fermés par défaut sauf le premier.
+
+Niveau 3
+• Accueil : un carrousel centré et non collé aux bords de la page, les trois meilleurs
+avis clients, les logos de 5 partenaires alignés sur une même ligne.
+• À propos : un paragraphe sur l'histoire de la société, son activité et la fabrication
+des produits ; une minimap (iframe) pointant vers l'adresse de la société ; un
+numéro de téléphone cliquable (tel:) et un bouton « Contactez-nous » vers la page
+de contact.
+Exigence minimale
+• Travail individuel : partie commune + les 6 pages ci-dessus.
+Bonus (points supplémentaires)
+• Charte graphique entièrement définie en variables CSS (:root).
+• Effets de survol et transitions sur les cartes et les boutons.
+• Mode sombre automatique avec prefers-color-scheme (non vu en cours, à vous
+de chercher dans la documentation).
+• Une page 404 personnalisée et la mise en ligne du site sur GitHub Pages.
+Barème (/20)
+Critère Points
+Partie commune (navigation, footer, architecture) 4
+Pages (fonctionnement et respect des consignes) 8
+Qualité du code (indentation, HTML sémantique, CSS) 3
+Responsive et accessibilité 2
+Soutenance 3
+Total 20
+Soutenance
+Démonstration de votre site sur ordinateur et en affichage mobile, puis modification
+en direct d'une partie du code à la demande de l'examinateur.
+Vous devez être capable d'expliquer l'intégralité du code rendu. L'utilisation de notions
+hors cours est autorisée, à condition de savoir les expliquer.
