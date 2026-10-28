@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Accueil - Fleur d'encre</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="site-header">
+		<a class="logo" href="index.html">Fleur d'encre</a>
+		<nav aria-label="Navigation principale">
+			<a href="index.html">Accueil</a>
+			<a href="boutique.html">Boutique</a>
+			<a href="faq.html">FAQ</a>
+			<a href="a-propos.html">À propos</a>
+			<a href="contact.html">Contact</a>
+			<a class="nav-login" href="login.html">Connexion</a>
+		</nav>
+	</header>
+
+	<main>
+		<section
+			class="hero carousel"
+			aria-label="Nouveautés"
+			aria-roledescription="carrousel"
+		>
+			<div class="slide slide-one is-active" aria-hidden="false">
+				<p class="eyebrow">Illustrations faites main</p>
+				<h1>Des fleurs qui racontent une histoire.</h1>
+				<a class="button" href="boutique.html">Découvrir la boutique</a>
+			</div>
+			<div class="slide slide-two" aria-hidden="true">
+				<p class="eyebrow">Collection florale</p>
+				<h2>Des pétales et des couleurs à offrir.</h2>
+				<a class="button" href="boutique.html">Voir la collection</a>
+			</div>
+			<div class="slide slide-three" aria-hidden="true">
+				<p class="eyebrow">Atelier de dessin</p>
+				<h2>Chaque fleur est dessinée avec soin.</h2>
+				<a class="button" href="a-propos.html">Découvrir notre histoire</a>
+			</div>
+			<button
+				class="carousel-control carousel-previous"
+				type="button"
+				aria-label="Diapositive précédente"
+			>
+				&#8592;
+			</button>
+			<button
+				class="carousel-control carousel-next"
+				type="button"
+				aria-label="Diapositive suivante"
+			>
+				&#8594;
+			</button>
+			<div class="carousel-indicators" aria-label="Choisir une diapositive">
+				<button
+					class="is-active"
+					type="button"
+					aria-label="Afficher la diapositive 1"
+					aria-pressed="true"
+				></button>
+				<button
+					type="button"
+					aria-label="Afficher la diapositive 2"
+					aria-pressed="false"
+				></button>
+				<button
+					type="button"
+					aria-label="Afficher la diapositive 3"
+					aria-pressed="false"
+				></button>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="section-heading">
+				<p class="eyebrow">Ils nous font confiance</p>
+				<h2>Les mots de nos clients</h2>
+			</div>
+			<div class="review-grid">
+				<blockquote>
+					“J'ai choisi une illustration sur mesure pour un anniversaire : le prénom et les couleurs ont rendu le cadeau vraiment personnel.”
+					<cite>Sarah Croche</cite>
+				</blockquote>
+				<blockquote>
+					“Le dessin est arrivé joliment emballé et prêt à offrir. La personne à qui je l'ai donné l'a tout de suite accroché dans son salon.”
+					<cite>Lee Tchi</cite>
+				</blockquote>
+				<blockquote>
+					“Je m'attendais à des vrais fleurs, mais j'ai été surprise que ça soit des dessins personnalisés.”
+					<cite>Emma Caréna</cite>
+				</blockquote>
+			</div>
+		</section>
+
+		<section class="partners">
+			<p class="eyebrow">Nos partenaires</p>
+			<div>
+				<img class="partner-logo" src="images/BIC-LOGO.SVG" alt="BIC">
+				<img class="partner-logo" src="images/RIFLE-PAPER-CO.JFIF" alt="Rifle Paper Co.">
+				<img class="partner-logo" src="images/PAPIER-TIGRE.JPG" alt="Papier Tigre">
+				<img class="partner-logo" src="images/FLEUX.JPG" alt="Fleux">
+				<img class="partner-logo partner-logo-bergamotte" src="images/BERGAMOTTE.JFIF" alt="Bergamotte">
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<a href="mailto:contact@fleur-dencre.fr">
+			© 2026 Fleur d'encre - Alyx Meur - Première année de Bachelor
+		</a>
+	</footer>
+	<script src="css/carousel.js" defer></script>
+</body>
+</html>
