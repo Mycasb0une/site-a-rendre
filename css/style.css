@@ -39,6 +39,7 @@
 	--radius-pill: 999px;
 	--radius-map: 24px;
 	--shadow-map: 0 10px 25px rgba(32, 49, 46, .08);
+	--shadow-card: 0 10px 24px rgba(32, 49, 46, .12);
 }
 
 * {
@@ -93,8 +94,10 @@ nav a:hover {
 .button {
 	border: 0;
 	color: var(--white);
+	display: inline-block;
 	padding: 12px 18px;
 	text-decoration: none;
+	transition: background-color .2s ease, color .2s ease, transform .2s ease;
 }
 
 .nav-login {
@@ -106,6 +109,7 @@ nav a:hover {
 .button:hover {
 	background: var(--nav-login-hover);
 	color: var(--white);
+	transform: translateY(-2px);
 }
 
 .button {
@@ -463,6 +467,13 @@ cite {
 /* Distingue chaque fiche produit et espace son titre, son image et son prix. */
 .product-card {
 	background: var(--white);
+	transition: box-shadow .25s ease, transform .25s ease;
+}
+
+.product-card:hover,
+.product-card:focus-within {
+	box-shadow: var(--shadow-card);
+	transform: translateY(-4px);
 }
 
 .product-card img {
