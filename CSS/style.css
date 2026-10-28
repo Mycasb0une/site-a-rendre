@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap');
+
+/* Styles communs à toutes les pages */
+/* Centralise les couleurs du site pour les réutiliser dans les composants. */
+:root {
+	--ink: #20312e;
+	--paper: #f7f3eb;
+	--coral: #dd684e;
+	--sage: #a6c2ad;
+	--line: #d8d1c5;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* Définit l’apparence de base de la page et la typographie principale. */
+body {
+	margin: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: 'DM Sans', sans-serif;
+}
+
+a {
+	color: inherit;
+}
+
+/* Aligne le logo et les liens de navigation dans l’en-tête. */
+.site-header {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+	max-width: 1180px;
+	padding: 24px 32px;
+}
+
+.logo {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.45rem;
+	text-decoration: none;
+}
+
+/* Présente les liens du menu sur une ligne et signale le survol. */
+nav {
+	align-items: center;
+	display: flex;
+	gap: 22px;
+	font-size: .9rem;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: var(--coral);
+}
+
+.nav-login,
+.button {
+	background: var(--coral);
+	border: 0;
+	color: white;
+	padding: 12px 18px;
+	text-decoration: none;
+}
+
+/* Centre le contenu principal et limite sa largeur sur les grands écrans. */
+main {
+	margin: auto;
+	max-width: 1180px;
+	padding: 0 32px 64px;
+}
+
+h1,
+h2 {
+	font-family: 'Playfair Display', serif;
+}
+
+/* Harmonise la hiérarchie des titres et des petits intitulés de section. */
+h1 {
+	font-size: clamp(2.6rem, 6vw, 5.5rem);
+	line-height: .98;
+	margin: 10px 0 28px;
+	max-width: 650px;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+.eyebrow {
+	font-size: .76rem;
+	letter-spacing: .14em;
+	text-transform: uppercase;
+}
+
+.page-intro {
+	padding: 65px 0 35px;
+}
+
+.page-intro h1 {
+	font-size: 4rem;
+	margin: 8px 0;
+}
+
+/* Met en forme les informations de contact et les liens de coordonnées. */
+.contact-info {
+	line-height: 1.8;
+}
+
+.contact-info a:not(.button) {
+	color: var(--coral);
+	font-weight: 700;
+}
+
+/* Dispose les formulaires en colonne et harmonise champs et bouton. */
+.form-card {
+	display: grid;
+	gap: 10px;
+}
+
+.form-card input,
+.form-card textarea {
+	background: white;
+	border: 1px solid var(--line);
+	font: inherit;
+	padding: 13px;
+	width: 100%;
+}
+
+.form-card .button {
+	cursor: pointer;
+	margin-top: 10px;
+	width: fit-content;
+}
+
+/* Sépare le pied de page du contenu et centre son texte. */
+.site-footer {
+	border-top: 1px solid var(--line);
+	padding: 25px 32px;
+	text-align: center;
+}
+
+.site-footer a {
+	font-size: .85rem;
+	text-decoration: none;
+}
+
+/* Adapte l’en-tête, les titres et les marges aux petits écrans. */
+@media (max-width: 760px) {
+	.site-header {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 18px;
+	}
+
+	nav {
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+
+	.page-intro h1 {
+		font-size: 3rem;
+	}
+}
+
+@media (max-width: 480px) {
+	main {
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+}
+
+/* Accueil */
+/* Réserve une zone centrée pour les diapositives et n’affiche que la diapositive active. */
+.hero {
+	min-height: 440px;
+	overflow: hidden;
+	position: relative;
+}
+
+.slide {
+	color: white;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 440px;
+	padding: 8%;
+}
+
+.slide.is-active {
+	display: flex;
+}
+
+/* Fournit une image de fond et un voile contrasté à chaque diapositive. */
+.slide-one {
+	background:
+		linear-gradient(100deg, rgba(32, 49, 46, .72), rgba(32, 49, 46, .08)),
+		url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=85') center/cover;
+}
+
+.slide-two {
+	background:
+		linear-gradient(100deg, rgba(32, 49, 46, .68), rgba(32, 49, 46, .12)),
+		url('https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=1400&q=85') center/cover;
+}
+
+.slide-three {
+	background:
+		linear-gradient(100deg, rgba(32, 49, 46, .72), rgba(32, 49, 46, .12)),
+		url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1400&q=85') center/cover;
+}
+
+/* Positionne les commandes précédent/suivant sur le carrousel. */
+.carousel-control {
+	align-items: center;
+	background: rgba(247, 243, 235, .9);
+	border: 0;
+	border-radius: 50%;
+	color: var(--ink);
+	cursor: pointer;
+	display: flex;
+	font: inherit;
+	font-size: 1.3rem;
+	height: 44px;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 44px;
+	z-index: 2;
+}
+
+.carousel-control:hover,
+.carousel-control:focus-visible {
+	background: white;
+}
+
+.carousel-previous {
+	left: 18px;
+}
+
+.carousel-next {
+	right: 18px;
+}
+
+/* Place les indicateurs en bas du carrousel et marque celui qui est actif. */
+.carousel-indicators {
+	bottom: 20px;
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	left: 0;
+	position: absolute;
+	right: 0;
+	z-index: 2;
+}
+
+.carousel-indicators button {
+	background: rgba(255, 255, 255, .6);
+	border: 0;
+	border-radius: 999px;
+	cursor: pointer;
+	height: 10px;
+	padding: 0;
+	width: 10px;
+}
+
+.carousel-indicators button.is-active {
+	background: white;
+	width: 28px;
+}
+
+.carousel-control:focus-visible,
+.carousel-indicators button:focus-visible {
+	outline: 3px solid var(--coral);
+	outline-offset: 3px;
+}
+
+.slide .button {
+	align-self: flex-start;
+}
+
+/* Espace la section d’accueil et aligne son titre avec son surtitre. */
+.section {
+	padding: 80px 0 30px;
+}
+
+.section-heading {
+	align-items: baseline;
+	display: flex;
+	gap: 24px;
+}
+
+.section-heading h2 {
+	margin: 0 0 25px;
+}
+
+/* Présente les trois avis en colonnes avec une signature sous chaque texte. */
+.review-grid {
+	display: grid;
+	gap: 18px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+blockquote {
+	border-top: 1px solid var(--line);
+	font-family: 'Playfair Display', serif;
+	font-size: 1.25rem;
+	margin: 0;
+	padding: 22px 0;
+}
+
+cite {
+	display: block;
+	font-family: 'DM Sans', sans-serif;
+	font-size: .8rem;
+	font-style: normal;
+	margin-top: 18px;
+}
+
+/* Aligne les logos partenaires sur une rangée avec une taille cohérente. */
+.partners {
+	border-bottom: 1px solid var(--line);
+	border-top: 1px solid var(--line);
+	padding: 30px 0;
+}
+
+.partners div {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	gap: 18px;
+	font-weight: 700;
+	font-size: .78rem;
+}
+
+.partner-logo {
+	display: block;
+	height: 56px;
+	object-fit: contain;
+	width: 130px;
+}
+
+.partner-logo-bergamotte {
+	width: 190px;
+}
+
+/* Réorganise les avis et les logos partenaires sur les écrans plus étroits. */
+@media (max-width: 760px) {
+	.review-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.partners div {
+		flex-wrap: wrap;
+	}
+}
+
+@media (max-width: 480px) {
+	.review-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.section-heading {
+		display: block;
+	}
+}
+
+/* Boutique */
+/* Aligne le champ de recherche sur la largeur de la boutique. */
+.product-search {
+	display: grid;
+	margin: 0 auto 8px;
+	max-width: 460px;
+	width: 100%;
+}
+
+.product-search input {
+	background: white;
+	border: 1px solid var(--line);
+	border-radius: 2px;
+	color: var(--ink);
+	font: inherit;
+	padding: 13px 15px;
+	width: 100%;
+}
+
+.product-search input:focus-visible {
+	outline: 3px solid var(--sage);
+	outline-offset: 2px;
+}
+
+.product-search-status {
+	font-size: .9rem;
+	min-height: 1.4em;
+}
+
+/* Affiche les fiches produits en grille et adapte l’image à chaque carte. */
+.product-grid {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+/* Distingue chaque fiche produit et espace son titre, son image et son prix. */
+.product-card {
+	background: white;
+}
+
+.product-card img {
+	aspect-ratio: 1;
+	display: block;
+	object-fit: cover;
+	width: 100%;
+}
+
+.product-card img.product-lys {
+	object-fit: contain;
+}
+
+.product-card div {
+	padding: 16px;
+}
+
+.product-card h2 {
+	font-size: 1.2rem;
+	margin: 0 0 10px;
+}
+
+.price {
+	color: var(--coral);
+	font-weight: 700;
+}
+
+/* Réduit le nombre de colonnes de produits selon la largeur disponible. */
+@media (max-width: 760px) {
+	.product-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 480px) {
+	.product-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* FAQ */
+/* Limite la largeur des questions et différencie les titres d’accordéon. */
+.faq-list {
+	margin: 20px auto;
+	max-width: 800px;
+}
+
+.faq-list details {
+	border-bottom: 1px solid var(--line);
+	padding: 20px 0;
+}
+
+/* Rend les questions identifiables et les réponses faciles à lire. */
+.faq-list summary {
+	cursor: pointer;
+	font-family: 'Playfair Display', serif;
+	font-size: 1.3rem;
+}
+
+.faq-list p {
+	line-height: 1.7;
+	max-width: 650px;
+}
+
+/* À propos */
+/* Place le texte de présentation à côté de l’illustration de l’atelier. */
+.about-grid {
+	display: grid;
+	gap: 60px;
+	grid-template-columns: 1fr 1fr;
+	padding: 35px 0;
+}
+
+.about-grid p {
+	line-height: 1.8;
+	max-width: 48ch;
+}
+
+/* Crée une carte décorative pour représenter l’atelier. */
+.map {
+	position: relative;
+	min-height: 280px;
+	padding: 20px;
+	border-radius: 24px;
+	overflow: hidden;
+	background:
+		radial-gradient(circle at 18% 18%, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0) 18%),
+		linear-gradient(135deg, #f3eadb 0%, #e5d0b5 35%, #d1ad8d 100%);
+	border: 1px solid rgba(32, 49, 46, .08);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+/* Ajoutent les formes décoratives qui composent l’illustration de la carte. */
+.map::before {
+	content: '';
+	position: absolute;
+	inset: 14% 18% 12% 10%;
+	border: 1px solid rgba(32, 49, 46, .2);
+	border-radius: 52% 48% 58% 42% / 42% 58% 42% 58%;
+	background: rgba(255, 255, 255, .18);
+	transform: rotate(-20deg);
+}
+
+.map::after {
+	content: '';
+	position: absolute;
+	width: 150%;
+	height: 120%;
+	right: -28%;
+	bottom: -25%;
+	border-radius: 50% 0 0 0;
+	background: linear-gradient(135deg, rgba(255, 255, 255, .18), rgba(32, 49, 46, .12));
+	transform: rotate(24deg);
+}
+
+.map span {
+	position: relative;
+	z-index: 1;
+	background: rgba(255, 255, 255, .8);
+	border-radius: 999px;
+	box-shadow: 0 10px 25px rgba(32, 49, 46, .08);
+	display: inline-block;
+	padding: 10px 14px;
+}
+
+/* Maintient le texte et l’illustration côte à côte sur tablette. */
+@media (max-width: 760px) {
+	.about-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* Passe à une seule colonne sur les petits écrans. */
+@media (max-width: 480px) {
+	.about-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Contact */
+/* Place les coordonnées et le formulaire en deux colonnes. */
+.contact-grid {
+	display: grid;
+	gap: 60px;
+	grid-template-columns: 1fr 1fr;
+	padding: 35px 0;
+}
+
+/* Conserve la disposition en deux colonnes sur tablette. */
+@media (max-width: 760px) {
+	.contact-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* Sur les petits écrans, place les coordonnées au-dessus du formulaire. */
+@media (max-width: 480px) {
+	.contact-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Connexion */
+/* Limite la largeur du formulaire de connexion et lui ajoute de l’espace vertical. */
+.form-page {
+	max-width: 620px;
+	padding: 70px 0;
+}
